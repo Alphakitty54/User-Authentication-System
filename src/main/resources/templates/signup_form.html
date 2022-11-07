@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="C.css" />
+
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</head>
+
+<body style="background-color: teal ;font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;">
+    <div class="container" style="background-color:white ;border-radius: 30px;width: 700px;padding-top: 30px; padding-bottom: 30px; margin-top: 90px; margin-right: 40px; margin-left: 30%;
+   "></s>
+        <div style="text-align: center;">
+            <h1>Registration </h1>
+        </div>
+
+        <form th:action="@{/process_register}" th:object="${user}"
+            method="post" style="max-width: 600px; margin: 0 auto;">
+     
+            <div class="form-group row">
+                <label class=" col-4 col-form-label">E-mail: </label>
+                <div class="col-8">
+                    <input type="email" th:field="*{email}" class="form-control" required minlength="6" maxlength="10"/>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-4 col-form-label">Password: </label>
+                <div class="col-8">
+                    <input type="password" th:field="*{password}" class="form-control" required minlength="6" maxlength="10"/>
+                </div>
+            </div>
+             
+            <div class="form-group row">
+                <label class="col-4 col-form-label">First Name: </label>
+                <div class="col-8">
+                    <input type="text" th:field="*{Firstname}" class="form-control"
+                            required minlength="2" maxlength="20"/>
+                </div>
+            </div>
+             
+            <div class="form-group row">
+                <label class="col-4 col-form-label">Last Name: </label>
+                <div class="col-8">
+                    <input type="text" th:field="*{Lastname}" class="form-control"
+                            required minlength="2" maxlength="20" />
+                </div>
+            </div>
+     
+            <div>
+                <button type="submit" style=" background-color: #15b3f1;
+                color: white;
+                padding: 16px 20px;
+                margin: 8px 0;
+                border: none;
+                text-align: 50px;
+                cursor: pointer;
+                width: 100%;
+                opacity: 0.9;
+                text-size-adjust: 40px;" class="registerbtn">Sign Up</button>
+            </div>
+        
+     
+        </form>
+    </div>
+</body>
+</html>
