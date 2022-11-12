@@ -1,4 +1,4 @@
 # demo
 
-An usual user authentication System that uses email, password to login user into its system. This uses REST API model. I have used mysql, java springboot to make backend. 
+An authentication system that uses email, password to log in to your system. This makes advantage of the REST API model and connects to MySQL to determine the correct login credentials (firstname, lastname, and password).
  
